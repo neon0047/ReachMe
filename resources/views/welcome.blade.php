@@ -13,7 +13,7 @@
         <style>
             html, body {
                 background-color: #0d4b5e;
-                color: #636b6f;
+                color: #12d7e6;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -84,16 +84,16 @@
                     ReachMe
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+{{--                <div class="links" style = "color: #12d7e6">--}}
+{{--                    <a href="https://laravel.com/docs">Docs</a>--}}
+{{--                    <a href="https://laracasts.com">Laracasts</a>--}}
+{{--                    <a href="https://laravel-news.com">News</a>--}}
+{{--                    <a href="https://blog.laravel.com">Blog</a>--}}
+{{--                    <a href="https://nova.laravel.com">Nova</a>--}}
+{{--                    <a href="https://forge.laravel.com">Forge</a>--}}
+{{--                    <a href="https://vapor.laravel.com">Vapor</a>--}}
+{{--                    <a href="https://github.com/laravel/laravel">GitHub</a>--}}
+{{--                </div>--}}
             </div>
         </div>
     </body>
