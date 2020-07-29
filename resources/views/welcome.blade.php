@@ -4,16 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>ReachMe</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+        />
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #0d4b5e;
-                color: #12d7e6;
+                background-color: #282C34;
+                color: #61DAFB;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -63,10 +66,10 @@
             }
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
+    <body onload="typeWriter()">
+        <div class="flex-center position-ref full-height" >
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links" >
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
@@ -80,20 +83,27 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md swing-top-fwd">
                     ReachMe
                 </div>
 
-{{--                <div class="links" style = "color: #12d7e6">--}}
-{{--                    <a href="https://laravel.com/docs">Docs</a>--}}
-{{--                    <a href="https://laracasts.com">Laracasts</a>--}}
-{{--                    <a href="https://laravel-news.com">News</a>--}}
-{{--                    <a href="https://blog.laravel.com">Blog</a>--}}
-{{--                    <a href="https://nova.laravel.com">Nova</a>--}}
-{{--                    <a href="https://forge.laravel.com">Forge</a>--}}
-{{--                    <a href="https://vapor.laravel.com">Vapor</a>--}}
-{{--                    <a href="https://github.com/laravel/laravel">GitHub</a>--}}
-{{--                </div>--}}
+
+                <p  id="demo"></p>
+
+                <script>
+                    var i = 0;
+                    var txt = 'Hello everyone! This is social media platform, Built on php framework Laravel by brainiaaac';
+                    var speed = 50;
+
+                    function typeWriter() {
+                        if (i < txt.length) {
+                            document.getElementById("demo").innerHTML += txt.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, speed);
+                        }
+                    }
+                </script>
+
             </div>
         </div>
     </body>

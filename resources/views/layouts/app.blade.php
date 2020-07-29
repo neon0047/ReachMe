@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>ReachMe</title>
+    <link rel="icon" href="/svg/logo.svg" type="image/icon type">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,14 +20,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style = "background-color: #0d3642">
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand d-flex" href="{{ url('/') }}">
-                    <div><img src="/svg/logo.svg" style="height: 30px; border-right:1px solid #333333" class="pr-3"></div>
-                    <div class="pt-1 pl-3"><strong>ReachMe</strong></div>
+<body  style = "
+  background-color: #181919; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#181919, grey); /* Standard syntax (must be last) */">
+    <div id="app" >
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+            <div class="container" >
+                <a class="navbar-brand d-flex" href="{{ url('/home') }}">
+                    <div><img src="/svg/logo.svg" style="height: 30px; border-right:1px solid cadetblue" class="pr-3"></div>
+                    <div class="pt-1 pl-3" style="color: cadetblue"><strong>ReachMe</strong></div>
                 </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,7 +56,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -76,6 +80,24 @@
         <main class="py-4">
             @yield('content')
         </main>
+
     </div>
+
 </body>
+<div>
+    <footer class="si"  style=" padding: 20px 0px 0 540px ;
+                         background: #d6d6d6;
+                         font-family: Lucida Sans Unicode;
+                         color:#444444;
+                         font-size:10px;
+                         ">
+        <a style ="color:#444444;  "  href="https://github.com/neon0047/ReachMe"> GITHUB</a>
+        <a style ="color:#444444; padding-left: 20px "  href="https://laravel.com/"> LARAVEL</a>
+        <a style ="color:#444444; padding-left: 20px "  href="https://www.instagram.com/brainiaaac/"> BRAINIAAAC</a>
+        <BR>
+            &copy; 2020 ReachMe <span style=" font-size:18px">|</span> Design by Nagendra
+        </BR>
+
+    </footer>
+</div>
 </html>
